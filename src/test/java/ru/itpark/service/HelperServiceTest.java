@@ -8,10 +8,18 @@ class HelperServiceTest {
 
     @Test
     void initials() {
-        HelperService service = new HelperService();
-        String actual = service.initials("Vasyliy Petrov");
-        String expected = "VP";
-        assertEquals(expected,actual);
+        {
+            HelperService service = new HelperService();
+            String actual = service.initials("Vasyliy Petrov");
+            String expected = "VP";
+            assertEquals(expected, actual);
+        }
+        {
+            HelperService service = new HelperService();
+            String actual = service.initials("Vasyliy");
+            String expected = "V";
+            assertEquals(expected, actual);
+        }
 
 
 
